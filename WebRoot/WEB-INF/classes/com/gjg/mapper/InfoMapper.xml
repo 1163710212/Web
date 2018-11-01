@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 以下的命名空间值必须是接口的全路径 -->
+<mapper namespace="com.gjg.mapper.InfoMapper">
+   <!-- id值必须是接口的唯一的方法名称 -->
+   <select id="query"  resultType="info">
+      select * from info
+    </select>
+    <select id="queryById"  resultType="info" parameterType="str">
+      select * from info where id=#{value}
+    </select>
+    
+    <insert id="add" parameterType="info">
+       insert into info(id,name,idcard,phone,mark)
+       values(#{id},#{name},#{idcard},#{phone},#{mark})
+    </insert>
+    
+    <update id="modify" parameterType="info">
+      update info set name=#{name},idcard=#{idcard},phone=#{phone}, 
+      mark=#{mark} where id=#{id}
+    </update>
+    
+    <delete id="remove" parameterType="str">
+     delete from info where id=#{value} 
+    </delete>
+</mapper>
