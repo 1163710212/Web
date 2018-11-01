@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*,com.gjg.bean.*" 
 pageEncoding="gbk"%> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html> <head>   <title>ึ๗าณ</title> 
+<html> <head>   <title>ึ๗าณ654654</title> 
     <%
         List<Info> infos=(List<Info>)request.getAttribute("infos");
      %>
